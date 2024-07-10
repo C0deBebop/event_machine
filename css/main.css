@@ -8,7 +8,85 @@ padding: 0;
 margin: 0;
 }
 
-
 html {
 box-sizing: border-box;
+}
+
+body {
+background: #400862;    
+}
+
+header {
+width: 95%;
+height: 100px;
+padding: 70px 15px 15px 50px;   
+}
+
+header h2 {  
+display: block;
+width: 25%;  
+}
+
+header h2 a {
+text-decoration: none;  
+color: #fafafa;
+font: normal 700 1em "sigmund-pro", sans-serif; 
+}
+
+nav {
+width: 10%;
+height: 50px;
+float: right;
+margin: -35px 50px 0 0;  
+}
+
+nav div  {
+background: #fafafa;
+display: block;    
+width: 90%;
+height: 60px;
+text-decoration: none;
+border-radius: 25px;
+}
+
+nav div a {
+color: #400862;
+font: normal 700 1.2em "sigmund-pro", sans-serif; 
+text-decoration: none;
+text-align: center;
+cursor: pointer;
+display: block;
+margin: 0 auto;
+line-height: 3em;
+}
+
+main div {
+width: 50%;
+height: 770px;    
+color: #fafafa;
+font: normal 500 2.8em "sigmund-pro", sans-serif;    
+padding: 95px 0 0 75px;
+}
+
+main div h1 {
+margin-bottom: 50px;
+}
+
+main div a {
+border: 2px solid #fafafa;
+border-radius: 25px;    
+color: #fafafa;
+font: normal 500 0.7em "sigmund-pro", sans-serif; 
+text-decoration: none;
+padding: 15px 75px;
+}
+
+footer {
+width: 100%;    
+}
+
+footer p {
+color: #fafafa;
+font: normal 500 1em "sigmund-pro", sans-serif;   
+text-align: center; 
 }
