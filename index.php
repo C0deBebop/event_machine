@@ -15,4 +15,5 @@
         <a href="get-started/">Get started</a>
     </div>
 </main>
-<?php include 'includes/footer.php'; ?>
+</body>
+</html>

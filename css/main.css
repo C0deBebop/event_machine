@@ -18,7 +18,7 @@ background: #400862;
 
 header {
 width: 95%;
-height: 100px;
+height: 85px;
 padding: 70px 15px 15px 50px;   
 }
 
@@ -35,9 +35,9 @@ font: normal 700 1em "sigmund-pro", sans-serif;
 
 nav {
 width: 10%;
-height: 50px;
+height: 45px;
 float: right;
-margin: -35px 50px 0 0;  
+margin: -45px 50px 0 0;  
 }
 
 nav div  {
@@ -61,11 +61,11 @@ line-height: 3em;
 }
 
 main div {
-width: 50%;
+width: 45%;
 height: 770px;    
 color: #fafafa;
-font: normal 500 2.8em "sigmund-pro", sans-serif;    
-padding: 95px 0 0 75px;
+font: normal 500 2.6em "sigmund-pro", sans-serif;    
+padding: 125px 0 0 175px;
 }
 
 main div h1 {
@@ -81,12 +81,88 @@ text-decoration: none;
 padding: 15px 75px;
 }
 
+
+.container {
+background: #F2F2F2;
+width: 100%;
+height: 850px;
+padding-top: 5%;
+}
+
+#signup {
+width: 25%;
+height: 550px;
+border-radius: 50px;
+background: #fff;
+margin: 0 auto;
+padding: 50px 75px;
+}
+
+#signup form {
+width: 100%;   
+margin: 0 auto; 
+}
+
+#signup h4 {
+font: normal 700 32px "sigmund-pro", sans-serif; 
+color: #8220BF;
+margin-bottom: 35px;
+}
+
+#signup input[type='text']::placeholder,
+#signup input[type='email']::placeholder,
+#signup input[type='password']::placeholder {
+padding-left: 10px;
+}
+
+#signup input[type='text'] {
+width: 100%;
+height: 50px;
+border: 1px solid #ccc;
+margin-bottom: 35px;
+border-radius: 15px;
+}
+
+#signup input[type='email'] {
+width: 100%;
+height: 50px;
+border: 1px solid #ccc;
+margin-bottom: 35px;
+border-radius: 15px;
+}    
+
+#signup input[type='password'] {
+width: 100%;
+height: 50px;
+border: 1px solid #ccc;
+margin-bottom: 35px;
+border-radius: 15px;
+}
+
+#signup input[type='submit'] {
+background: #400862;
+border-radius: 25px;
+border: none;
+color: #fafafa;
+font: normal 500 1em "sigmund-pro", sans-serif; 
+width: 50%;
+height: 65px;
+cursor: pointer;
+}
+
 footer {
-width: 100%;    
+width: 100%; 
+height: auto; 
+background: #fff; 
+padding: 25px 0; 
+position: fixed;
+bottom: 0;
 }
 
 footer p {
-color: #fafafa;
+color: #400862;
 font: normal 500 1em "sigmund-pro", sans-serif;   
-text-align: center; 
+text-align: center;
+
 }
+
