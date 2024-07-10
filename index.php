@@ -12,7 +12,7 @@
           find cool things going 
           on around you  
         </h1>
-        <a href="get-started/">Get started</a>
+        <a href="signup/">Get started</a>
     </div>
 </main>
 </body>
