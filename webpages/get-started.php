@@ -1,4 +1,17 @@
 <?php include '../includes/header.php'; ?>
+<?php require '../src/User.php'; 
+
+
+
+  $name = addslashes($_POST['name']);
+  $email = addslashes($_POST['email']);
+  $password = addslashes($_POST['password']);
+  $db = new Database('host', 'username', 'password', 'database');
+  $user = new User($db);
+  $user->create_profile($name, $email, $password);
+ 
+
+?>
 <header>
     <h2><a href="/event_machine/">Event Machine</a></h2>
     <nav>
@@ -10,8 +23,8 @@
       <div id="get-started">
         <h4>Let’s setup your profile</h4>
         <form>
-           <input type="text" name="age" placeholder="Age" required>
-          <select name="marital_status"> 
+           <input type="text" id="age" name="age" placeholder="Age">
+          <select name="marital_status" id="marital_status"> 
               <option value="single" selected>I'm single</option>
               <option value="married">I'm married</option>
               <option value="separated">I'm separated</option>
@@ -32,4 +45,5 @@
        <div class="progress-indicator" id="start"></div>
        <div class="progress-indicator" id="end"></div>
     </div>   
+    <script src="/event_machine/js/main.js"></script>
 <?php include '../includes/footer.php'; ?>

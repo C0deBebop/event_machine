@@ -198,6 +198,11 @@ height: 50px;
 cursor: pointer;
 }
 
+#get-started button:focus {
+background: #400862;
+color: #fafafa;    
+}
+
 #get-started button:last-of-type {
 margin-left: 10px;
 }
