@@ -26,20 +26,20 @@ class User {
 
     public function check_for_profile($email, $password){
        $mysqli  = new mysqli($this->db->host, $this->db->username, $this->db->password, $this->db->database);
-       $stmt = $mysqli->prepare("SELECT name, email, password FROM users WHERE email=?");
+       $stmt = $mysqli->prepare("SELECT id, name, email, password FROM users WHERE email=?");
        $stmt->bind_param('s', $email); 
        $stmt->execute();
-       $stmt->bind_result($name, $check_email, $user_password);
+       $stmt->bind_result($id, $name, $check_email, $user_password);
        $stmt->fetch();
        if($check_email && password_verify($password, $user_password)){
-            return $this->get_profile($name, $email);
+            return $this->get_profile($id, $name, $email);
        } else {
             echo 'Email does not exist';
        }
     } 
 
-    private function get_profile($name, $email){
-        return [$name, $email];
+    private function get_profile($id, $name, $email){
+        return [$id, $name, $email];
     }
 
 /*

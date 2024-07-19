@@ -286,7 +286,7 @@ height: 100px;
 font: normal 500 0.9em "sigmund-pro", sans-serif; 
 }
 
-#events input[type='button']:nth-child(2n-1) {
+#events input[type='submit'] {
 width: 45%;
 height: 70px;  
 cursor: pointer;

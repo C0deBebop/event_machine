@@ -2,7 +2,7 @@
 <header>
     <h2><a href="/event_machine/">Event Machine</a></h2>
     <nav>
-      <div><a href="/signin/">Sign in</a></div>
+      <div><a href="/event_machine/signin/">Sign in</a></div>
     </nav>
 </header>
   <div class="container">  

@@ -14,9 +14,10 @@
             $db = new Database('host', 'username', 'password', 'database');
             $user = new User($db);
             $user_data = $user->check_for_profile($_POST['email'], $_POST['password']);
-            $_SESSION['name'] = $user_data[0];
-            $_SESSION['email'] = $user_data[1];
-            $data = array('name' => $_SESSION['name'], 'email' => $_SESSION['email']);
+            $_SESSION['id'] = $user_data[0];
+            $_SESSION['name'] = $user_data[1];
+            $_SESSION['email'] = $user_data[2];
+            $data = array('name' => $_SESSION['name'], 'email' => $_SESSION['email'], 'id' => $_SESSION['id']);
             echo "Hello, {$data['name']}";
 
         ?>
