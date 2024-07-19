@@ -84,7 +84,7 @@ padding: 15px 75px;
 .container {
 background: #F2F2F2;
 width: 100%;
-height: 90vh;
+height: 100%;
 padding-top: 5%;
 }
 
@@ -120,7 +120,7 @@ width: 100%;
 margin: 0 auto; 
 }
 
-#signup h4, #signin h4, #get-started h4 {
+#signup h4, #signin h4, #get-started h4, #events h4 {
 font: normal 700 32px "sigmund-pro", sans-serif; 
 color: #8220BF;
 margin-bottom: 35px;
@@ -133,13 +133,21 @@ margin-bottom: 35px;
 #signin input[type='email']::placeholder,
 #signin input[type='password']::placeholder,
 #get-started input[type='text']::placeholder,
+#events input[type='text']::placeholder,
+#events textarea::placeholder,
 #get-started select {
 padding-left: 10px;
+color: #aaa9a9;
+font: normal 500 0.9em "sigmund-pro", sans-serif; 
 }
 
 #signup input[type='text'],
 #signin input[type='text'],
 #get-started input[type='text'],
+#events input[type='text'],
+#events input[type='date'],
+#events input[type='time'],
+#events select,
 #get-started select {
 width: 100%;
 height: 50px;
@@ -147,6 +155,7 @@ border: 1px solid #ccc;
 margin-bottom: 35px;
 border-radius: 15px;
 color: #7b7b7b;
+font: normal 500 0.9em "sigmund-pro", sans-serif; 
 }
 
 #signup input[type='email'] {
@@ -155,6 +164,7 @@ height: 50px;
 border: 1px solid #ccc;
 margin-bottom: 35px;
 border-radius: 15px;
+font: normal 500 0.9em "sigmund-pro", sans-serif; 
 }    
 
 #signup input[type='password'],
@@ -164,6 +174,7 @@ height: 50px;
 border: 1px solid #ccc;
 margin-bottom: 35px;
 border-radius: 15px;
+font: normal 500 0.9em "sigmund-pro", sans-serif; 
 }
 
 #signup input[type='submit'],
@@ -172,7 +183,7 @@ background: #400862;
 border-radius: 25px;
 border: none;
 color: #fafafa;
-font: normal 500 1em "sigmund-pro", sans-serif; 
+font: normal 500 0.9em "sigmund-pro", sans-serif; 
 width: 50%;
 height: 65px;
 cursor: pointer;
@@ -250,13 +261,103 @@ border: none;
 font: normal 500 1em "sigmund-pro", sans-serif; 
 }
 
+/*Event page */
 
+#events {
+width: 40%;
+height: auto;
+border-radius: 50px;
+background: #fff;
+margin: 0 auto 10% auto;
+padding: 75px 75px;
+}
 
+#events form select {
+background: #fff;    
+}
 
+#events textarea {
+border: 1px solid #ccc;   
+border-radius: 10px; 
+margin-bottom: 25px;
+padding-top: 5px;
+width: 100%;
+height: 100px;
+font: normal 500 0.9em "sigmund-pro", sans-serif; 
+}
 
+#events input[type='button']:nth-child(2n-1) {
+width: 45%;
+height: 70px;  
+cursor: pointer;
+background: #8220BF;
+color: #fafafa;
+border-radius: 20px;
+border: none;
+font: normal 500 1em "sigmund-pro", sans-serif; 
+}
 
+#events input[type='button']:last-of-type {
+width: 45%;
+height: 70px; 
+margin-left: 10px;   
+cursor: pointer;
+background: #400862;
+color: #fafafa;
+border-radius: 20px;
+border: none;
+font: normal 500 1em "sigmund-pro", sans-serif; 
+}
 
+#event-image {
+width: 100%;
+height: auto;
+margin: 0 0 75px 0;
+padding: 0 !important;
+}
 
+#events input[type=file] {
+text-indent: -9999px;   
+border: 2px solid #400862;
+border-radius: 20px;
+cursor: pointer;
+}
+
+#events input[type=file]::file-selector-button {
+border: none;
+width: 95%;
+height: 65px;
+font: normal 500 1em "sigmund-pro", sans-serif;
+}
+
+#events label {
+color: #400862; 
+font: normal 500 1em "sigmund-pro", sans-serif; 
+display: block;
+position: relative;
+top: 45px;
+left: 60px;
+width: 130px;
+}
+
+::-webkit-datetime-edit { 
+padding: 1em; 
+color: #7b7b7b;
+}
+
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-year-field { 
+color: #7b7b7b;
+}
+
+#events form select {
+-webkit-appearance: none;    
+padding-left: 15px;
+color: #7b7b7b;
+font: normal 500 0.9em "sigmund-pro", sans-serif; 
+}
 
 footer {
 width: 100%; 
