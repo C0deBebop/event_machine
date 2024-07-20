@@ -41,25 +41,61 @@ class Event {
       $stmt->close();
    }
 
-   public function update($event_id){
-
+   public function update($event_data){
+     $mysqli = new mysqli($this->db->host, $this->db->username, $this->db->password, $this->db->database);   
+     $columns = array('name', 'headline', 'description', 'venue', 'city', 'state', 'country', 'address', 'image', 'start_date', 'end_date', 'start_time', 'end_time', 'occurrence');
+     $query = "UPDATE events SET";
+     $comma = ' ';
+     foreach($event_data as $key => $value){
+          if(!empty($value) && in_array($key, $columns)) {
+              $query .= $comma . $key . " = '" . $mysqli->real_escape_string(trim($value)) . "' WHERE event_id=" . $event_data['id'];
+              $comma = ", ";
+          }
+     }
+     $mysqli->query($query);
    }
 
    public function delete($event_id){
-
+     $mysqli = new mysqli($this->db->host, $this->db->username, $this->db->password, $this->db->database);
+     $stmt = $mysqli->prepare("DELETE FROM events WHERE event_id=?");
+     $stmt->bind_param('s', $event_id);
+     $stmt->execute();
+     $stmt->close(); 
    }
 
    public function get_all_events(){
      //get all events for Event Machine
+     $mysqli = new mysqli($this->db->host, $this->db->username, $this->db->password, $this->db->database);
+     $result = $mysqli->query("SELECT * FROM events");
+     $rows = $result->fetch_all(MYSQLI_ASSOC);
+     return $rows; 
    }
 
    public function get_event($event_id) {
-
-   }
-
-
-   
-
+      $mysqli = new mysqli($this->db->host, $this->db->username, $this->db->password, $this->db->database);
+      $stmt = $mysqli->prepare("SELECT name, headline, description, venue, city, state, country, address, image, start_date, end_date, start_time, end_time, occurrence, user_id FROM events WHERE event_id=?");
+      $stmt->bind_param('s', $event_id);
+      $stmt->execute();
+      $stmt->bind_result($name, $headline, $description, $venue, $city, $state, $country, $address, $image, $start_date, $end_date, $start_time, $end_time, $occurrence, $user_id);
+      $stmt->fetch(); 
+      return array (
+        'name' => $name,
+        'headline' => $headline,
+        'description' => $description,
+        'venue' => $venue,
+        'city' => $city,
+        'state' => $state,
+        'country' => $country,
+        'address' => $address,
+        'image' => $image,
+        'start_date' => $start_date,
+        'end_date' => $end_date,
+        'start_time' => $start_time,
+        'end_time' => $end_time,
+        'occurrence' => $occurrence,
+        'user_id' => $user_id,
+      );
+ }
 
 }
 

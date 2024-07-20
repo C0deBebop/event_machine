@@ -1,8 +1,6 @@
 <?php include '../includes/header.php'; ?>
 <?php require '../src/User.php'; 
 
-
-
   $name = addslashes($_POST['name']);
   $email = addslashes($_POST['email']);
   $password = addslashes($_POST['password']);
@@ -10,7 +8,6 @@
   $user = new User($db);
   $user->create_profile($name, $email, $password);
  
-
 ?>
 <header>
     <h2><a href="/event_machine/">Event Machine</a></h2>
