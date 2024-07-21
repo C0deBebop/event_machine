@@ -38,11 +38,15 @@ class Message {
    }
 
    function delete_message($message_id){
-       
+       $mysqli = new mysqli($this->db->host, $this->db->username, $this->db->password, $this->db->database);
+       $stmt = $mysqli->prepare("DELETE FROM messages WHERE message_id=?");
+       $stmt->bind_param('s', $message_id);
+       $stmt->execute();
+       $stmt->close();
    }
 
    function delete_all_messages($user_id){
-
+      
    }
 
 
