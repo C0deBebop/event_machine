@@ -12,7 +12,7 @@ class Message {
 
    function get_all_messages($user_id){
         $mysqli = new mysqli($this->db-host, $this->db->username, $this->db->password, $this->db->database);
-        $stmt = $mysqli->prepare("SELECT * FROM messages where recipient_id=?");
+        $stmt = $mysqli->prepare("SELECT * FROM messages WHERE recipient_id=?");
         $stmt->bind_param('s', $user_id);
         $stmt->execute();
         $stmt->close();
@@ -46,9 +46,12 @@ class Message {
    }
 
    function delete_all_messages($user_id){
-      
+       $mysqli = new mysqli($this->db->host, $this->db->username, $this->db->password, $this->db->database);
+       $stmt = $mysqli->prepare("DELETE FROM messages WHERE recipient_id=?");
+       $stmt->bind_param('s', $user_id);
+       $stmt->execute();
+       $stmt->close();
    }
-
 
 }
 
