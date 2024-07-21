@@ -58,12 +58,20 @@ class User {
        $stmt->close();
     }
 
-
-/*
-    function update_account(){
-
+    public function update_account($account){
+       $mysqli = new mysqli($this->db->host, $this->db->username, $this->db->password, $this->db->database);
+       $columns = ['name', 'email', 'password'];
+       $query = "UPDATE users SET";
+       $comma = ' ';
+       foreach($account as $key =>  $value){
+          if(!empty($value) && in_array($key, $columns)) {
+              $query .= $comma . $key . ' = ' . $mysqli->real_escape_string($value) . "' WHERE id=" . $account[id];
+              $comma .= ', ';
+          }
+       }
+       $mysqli->query($query);
     }
-*/
+
 
 
 }
