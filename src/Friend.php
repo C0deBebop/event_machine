@@ -16,8 +16,13 @@ class Friend {
         //get selected friend
     }
 
-    public function add_friend(){
+    public function add_friend($user_id, $friend_id){
        //add to your friend list
+       $mysqli = new mysqli($this->db->host, $this->db->username, $this->db->password, $this->db->database);
+       $stmt = $mysqli->prepare("INSERT INTO friends (user_id, friend_id) VALUES(?, ?)");
+       $stmt->bind_param('ss', $user_id, $friend_id);
+       $stmt->execute();
+       $stmt->close();
     }
 
     public function block_friend(){
