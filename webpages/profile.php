@@ -13,7 +13,7 @@
 
             $db = new Database('host', 'username', 'password', 'database');
             $user = new User($db);
-            $user_data = $user->check_for_profile($_POST['email'], $_POST['password']);
+            $user_data = $user->check_user_account($_POST['email'], $_POST['password']);
             $_SESSION['id'] = $user_data[0];
             $_SESSION['name'] = $user_data[1];
             $_SESSION['email'] = $user_data[2];

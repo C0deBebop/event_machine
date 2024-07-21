@@ -6,7 +6,7 @@
   $password = addslashes($_POST['password']);
   $db = new Database('host', 'username', 'password', 'database');
   $user = new User($db);
-  $user->create_profile($name, $email, $password);
+  $user->create_user_account($name, $email, $password);
  
 ?>
 <header>

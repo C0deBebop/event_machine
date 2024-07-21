@@ -13,7 +13,7 @@ class User {
         return password_hash($password, PASSWORD_BCRYPT);
     }
 
-    public function create_profile($name, $email, $password){
+    public function create_user_account($name, $email, $password){
         $hashed_password = $this->secure_user_password($password);
         $mysqli = new mysqli($this->db->host, $this->db->username, $this->db->password, $this->db->database);
         $stmt = $mysqli->prepare("INSERT INTO users (name, email, password, date_added) VALUES(?, ?, ?, ?)");
@@ -24,7 +24,7 @@ class User {
         $stmt->close();  
     }
 
-    public function check_for_profile($email, $password){
+    public function check_user_account($email, $password){
        $mysqli  = new mysqli($this->db->host, $this->db->username, $this->db->password, $this->db->database);
        $stmt = $mysqli->prepare("SELECT id, name, email, password FROM users WHERE email=?");
        $stmt->bind_param('s', $email); 
@@ -32,13 +32,13 @@ class User {
        $stmt->bind_result($id, $name, $check_email, $user_password);
        $stmt->fetch();
        if($check_email && password_verify($password, $user_password)){
-            return $this->get_profile($id, $name, $email);
+            return $this->get_user_account($id, $name, $email);
        } else {
             echo 'Email does not exist';
        }
     } 
 
-    private function get_profile($id, $name, $email){
+    private function get_user_account($id, $name, $email){
         return [$id, $name, $email];
     }
 
@@ -49,7 +49,7 @@ class User {
 
 
 
-    function update_profile(){
+    function update_account(){
 
     }
 */
