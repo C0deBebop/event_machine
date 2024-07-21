@@ -20,7 +20,11 @@ class Message {
    
 
    function get_message($message_id){
-
+       $mysqli = new mysqli();
+       $stmt = $mysqli->prepare("SELECT * from message WHERE message_id=?");
+       $stmt->bind_param('s', $message_id);
+       $stmt->execute();
+       $stmt->close();
    }
    
    function send_message($message_data){
