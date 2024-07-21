@@ -42,12 +42,20 @@ class User {
         return [$id, $name, $email];
     }
 
-    function deactive_account($id) {
+    public function deactive_account($id) {
         $mysqli = new mysqli($this->db->host, $this->db->username, $this->db->password, $this->db->database);
         $stmt = $mysqli->prepare("UPDATE profile SET account_status='inactive' WHERE user_id=?");
         $stmt->bind_param('s', $id);
         $stmt->execute();
         $stmt->close();  
+    }
+
+    public function reactivate_account($id){
+       $mysqli = new mysqli($this->db->host, $this->db->username, $this->db->password, $this->db->database);
+       $stmt = $mysqli->prepare("UPDATE profile SET account_status='active' WHERE user_id=?");
+       $stmt->bind_param('s', $id);
+       $stmt->execute();
+       $stmt->close();
     }
 
 
