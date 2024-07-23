@@ -12,8 +12,10 @@ class Friend {
       //get all your friends
     }
 
-    public function get_friend(){
+    public function get_friend($user_id, $friend_id){
         //get selected friend
+        $mysqli = new mysqli($this->db->host, $this->db->username, $this->db->password, $this->db->database);
+       // $stmt = $mysqli->prepare("");
     }
 
     public function add_friend($user_id, $friend_id){

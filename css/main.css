@@ -33,23 +33,18 @@ color: #fafafa;
 font: normal 700 1em "sigmund-pro", sans-serif; 
 }
 
-nav {
+header div  {
+background: #fafafa;
+display: block;    
 width: 10%;
-height: 45px;
+height: 60px;
+text-decoration: none;
+border-radius: 25px;
 float: right;
 margin: -45px 50px 0 0;  
 }
 
-nav div  {
-background: #fafafa;
-display: block;    
-width: 90%;
-height: 60px;
-text-decoration: none;
-border-radius: 25px;
-}
-
-nav div a {
+header div a {
 color: #400862;
 font: normal 700 1.2em "sigmund-pro", sans-serif; 
 text-decoration: none;
@@ -84,8 +79,8 @@ padding: 15px 75px;
 .container {
 background: #F2F2F2;
 width: 100%;
-height: 100%;
-padding-top: 5%;
+height: 1000px;
+padding-top: 2%;
 }
 
 .container h3 {
@@ -358,6 +353,222 @@ padding-left: 15px;
 color: #7b7b7b;
 font: normal 500 0.9em "sigmund-pro", sans-serif; 
 }
+
+/*
+
+background: #8220BF;
+color: #fafafa;
+border-radius: 20px;
+border: none;
+font: normal 500 1em "sigmund-pro", sans-serif; 
+
+*/
+
+
+nav {
+width: 50%;
+height: 125px;
+padding: 0;
+float: right;
+margin: -95px 5px 0 0;  
+}
+    
+nav ul {
+margin: 60px 0 0 95px;
+width: 60%;
+}
+
+nav ul li {
+display: inline;
+list-style-type: none;
+padding-left: 45px;
+}
+
+nav ul li a {
+font: normal 500 1.2em "sigmund-pro", sans-serif;     
+color: #fafafa;    
+text-decoration: none;
+}
+
+nav div  {
+background: #fafafa;  
+width: 160px;
+height: 60px;
+padding: 0;
+border-radius: 25px; 
+margin-top: -45px;
+}
+
+#content-card {
+width: 30%;
+height: 200px;
+background: #fafafa;
+border-radius: 50px;
+padding: 75px;
+margin: 5% auto 0 auto;   
+}
+
+#content-card img {
+display: block;
+width: 104px;
+height: 96px; 
+margin: 10px auto 0 auto;  
+color:#400862;
+opacity: 0.7;
+}
+
+#content-card h1 {
+color: #400862;    
+font: normal 700 2em "sigmund-pro", sans-serif;      
+text-align: center;
+margin-top: 10px;
+}
+
+#message-content-card {
+width: 60%;
+height: 600px;
+background: #fafafa;
+border-radius: 50px;
+padding: 75px;
+margin: 0 auto;  
+overflow-y: scroll;
+}
+
+#message-header-card {
+background: #fafafa;
+border-bottom: 1px solid #e2e2e2; 
+height: 100px;
+width: 63%;
+margin: -25px 0 0 -10px;
+position: fixed;
+}
+
+#message-content-card h4 {
+color: #400862;    
+font: normal 700 2em "sigmund-pro", sans-serif;      
+width: 25%;
+padding-top: 25px;
+}    
+
+#messages-menu {
+float: right;
+margin-top: -50px;
+}
+
+#messages-menu div{
+display: inline-block;   
+margin-right: 15px;
+cursor: pointer;
+}
+
+#messages-menu div img {
+width: 54px;
+height: 54px;    
+}
+
+#messages-flex-container {
+display: flex;
+flex-direction: row;
+margin-top: 5px;
+border-bottom: 1px solid #e2e2e2; 
+padding: 30px; 
+width: 100%;
+}
+
+#messages-flex-container:nth-child(2) {
+margin-top: 75px;
+}
+
+
+#messages-flex-container:last-of-type {
+border-bottom: none; 
+}
+
+#messages-flex-container div:last-of-type {
+margin-left: 2%;  
+width: 100%;
+}
+    
+#messages-flex-container div img {
+width: 148px;
+height: 148px;  
+border: 5px solid #CF96F4;  
+border-radius: 50%;
+}
+
+#messages-flex-container div .dates {   
+color: #400862;   
+font: normal 600 0.9em "sigmund-pro", sans-serif;      
+margin: 10px 0;
+text-align: right;
+width: 100%;
+}
+
+#messages-flex-container p:nth-child(2) {
+color: #8220BF;   
+font: normal 600 1.4em "sigmund-pro", sans-serif;      
+margin-bottom: 2px;
+}
+
+#messages-flex-container p {
+color: #400862;   
+font: normal 600 1em "sigmund-pro", sans-serif;      
+margin-bottom: 10px;
+}
+
+#messages-flex-container p:last-of-type {
+color: #400862;   
+font: normal 400 1em "sigmund-pro", sans-serif;      
+margin-bottom: 20px;
+}
+
+
+#messages-flex-container a:first-of-type  {
+display: inline-block;    
+background: #400862;   
+color: #fafafa;
+font: normal 500 1em "sigmund-pro", sans-serif;      
+border-radius: 15px; 
+margin: 0 20px 10px 0;
+padding: 15px 75px;
+text-decoration: none;
+}
+
+#messages-flex-container a:last-of-type  {
+display: inline-block;      
+background: #8220BF;
+color: #fafafa;    
+font: normal 500 1em "sigmund-pro", sans-serif;      
+border-radius: 15px; 
+margin: 0 20px 10px 0;
+padding: 15px 75px;
+text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 footer {
 width: 100%; 

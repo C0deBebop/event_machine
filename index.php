@@ -1,9 +1,7 @@
 <?php include 'includes/header.php'; ?>
 <header>
     <h2><a href="/event_machine/">Event Machine</a></h2>
-    <nav>
-      <div><a href="signin/">Sign in</a></div>
-    </nav>
+    <div><a href="signin/">Sign in</a></div>
 </header>
 <main>
     <div>
