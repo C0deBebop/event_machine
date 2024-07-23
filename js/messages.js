@@ -21,6 +21,9 @@ function closeWindow(){
     document.querySelector('#overlay').remove();
 }
 
+function friendWindow(){
+    windowDiv.getAttribute('', '');
+}
 
 function createWindow() {
     const windowDiv = document.createElement('div');
@@ -36,3 +39,27 @@ function createWindow() {
     })
     return windowDiv;   
  }
+
+ friendList.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('body').appendChild(overlay);
+});
+
+messages.addEventListener('click', (e) => {
+    e.preventDefault();
+    messageWindow();    
+});
+
+replyLink.forEach((replyButton) => {
+    replyButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('body').appendChild(overlay);
+    })
+});
+
+deleteLink.forEach((deleteButton) => {
+    deleteButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('body').appendChild(overlay);
+    })
+});
