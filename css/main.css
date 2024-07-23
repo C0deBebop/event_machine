@@ -545,6 +545,14 @@ padding: 15px 75px;
 text-decoration: none;
 }
 
+#overlay {
+background: rgb(88, 39, 117, 0.54);
+width: 100%;
+height: 100vh;
+position: fixed;
+top: 0;
+left: 0;
+}
 
 
 

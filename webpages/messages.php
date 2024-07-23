@@ -14,6 +14,7 @@
 
 <div class="container">
 <?php require '../src/Message.php';
+    //$messages[0]['user_id']
     $db = new Database('host', 'username', 'password', 'database');
     $messages = new Message($db);
     $all_messages = $messages->get_all_messages(4);
@@ -27,8 +28,8 @@
         echo "<div id='message-header-card'>";
         echo "<h4>Messages</h4>";
         echo "<div id='messages-menu'>";
-        echo "<div><img src='../images/friends-icon.png' alt=''></div>";
-        echo "<div><img src='../images/send-messages-icon.png' alt=''></div>";
+        echo "<div id='friend-list'><img src='../images/friends-icon.png' alt=''></div>";
+        echo "<div id='em-message'><img src='../images/send-messages-icon.png' alt=''></div>";
         echo "</div>";
         echo "</div>";
         foreach($all_messages as $messages){
@@ -41,8 +42,8 @@
             echo "<p>{$messages[0]['name']}</p>";
             echo "<p>{$messages[0]['subject']}</p>";
             echo "<p>{$messages[0]['message']}</p>";
-            echo "<a href='/event_machine/{$messages[0]['user_id']}'>Reply</a>";
-            echo "<a href='/event_machine/{$messages[0]['user_id']}'>Delete</a>";
+            echo "<a href='#' class='reply'>Reply</a>";
+            echo "<a href='#' class='delete'>Delete</a>";
             echo "</div>";
             echo "</div>";
         }
@@ -50,6 +51,12 @@
     } 
 
 ?>
-</div>
+   </div>
+   <footer>
+        <p>All rights reserved</p>
+    </footer>
+    <script src="../js/messages.js"></script>
+   </body>
+</html>
 
-<?php include '../includes/footer.php'; ?>
+
