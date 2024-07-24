@@ -8,8 +8,11 @@ class Friend {
        $this->db = $db;
     }
 
-    public function get_all_friends(){
+    public function get_all_friends($friend_id){
       //get all your friends
+      $mysqli = new mysqli($this->db->host, $this->db->username, $this->db->password, $this->db->database);
+      //$stmt = $mysqli->prepare("SELECT friends.friend_id, users.name, profile.user_id FROM friends WHERE user_id=?");
+
     }
 
     public function get_friend($user_id, $friend_id){

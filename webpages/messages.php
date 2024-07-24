@@ -35,11 +35,11 @@
         foreach($all_messages as $messages){
             echo "<div id='messages-flex-container'>";
             echo "<div>";
-            echo "<img src='../images/profiles/" . $messages[0]['image'] . "'>";
+            echo "<img src='../images/profiles/" . $messages[0]['image'] . "' class='images'>";
             echo "</div>";
             echo "<div>";
             echo "<p class='dates'>" . date_format(date_create($messages[0]['message_date']), "M,d Y H:i a") . "</p>";
-            echo "<p>{$messages[0]['name']}</p>";
+            echo "<p class='names'>{$messages[0]['name']}</p>";
             echo "<p>{$messages[0]['subject']}</p>";
             echo "<p>{$messages[0]['message']}</p>";
             echo "<a href='#' class='reply'>Reply</a>";

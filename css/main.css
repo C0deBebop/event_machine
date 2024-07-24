@@ -554,10 +554,112 @@ top: 0;
 left: 0;
 }
 
+#close {
+color: #8220BF;  
+font: normal 100 5em "sigmund-pro", sans-serif; 
+float: right;
+margin-right: 10px;
+text-decoration: none;
+}
+
+#message-container {
+background: #fafafa;
+width: 40%;
+height: 100vh;
+position: fixed;
+top: 0;
+right: 0;
+z-index: 99999 !important;
+animation: slideWindow 0.8s;
+}
+
+#message-window {
+width: 85%;    
+margin: 150px auto 0 auto;  
+ 
+}
+
+#message-window h4 {
+color: #400862;  
+font: normal 800 1.6em "sigmund-pro", sans-serif;  
+}
+
+#message-component {
+background: #fff;    
+border: 1px solid #ccc;
+border-radius: 15px;
+width: 100%;
+height: 400px;
+margin-top: 25px;
+}
+
+#message-component-header {
+padding: 10px;    
+}
+
+#message-component-header img {
+width: 96px;
+height: 96px;
+}
+ 
+#message-component-header span:first-of-type {
+display: block;    
+color: #8220BF;  
+font: normal 600 1.5em "sigmund-pro", sans-serif; 
+text-transform: capitalize;
+margin: -75px 0 0 120px;
+}
+
+#message-component-header #arrow {
+display: block;    
+color: #ccc;  
+font-size: 3em; 
+cursor: pointer;
+margin: -50px 0 0 575px;
+}
+
+#message-component textarea::placeholder {
+font: normal 400 1.8em "sigmund-pro", sans-serif; 
+color: #606060; 
+padding: 10px 0 0 10px;
+}
+
+#message-component textarea {
+border: none;
+width: 96%;
+height: 250px;
+margin-top: 40px;
+padding: 20px 0 0 20px;
+outline: transparent;
+font: normal 400 1em "sigmund-pro", sans-serif; 
+}
+   
+#message-component button {
+cursor: pointer;
+background: #400862;
+color: #fafafa;
+border-radius: 20px;
+border: none;
+font: normal 500 1em "sigmund-pro", sans-serif; 
+width: 200px;
+height: 60px;
+margin-top: 25px;
+}    
+
+#friends-window {
+
+}
 
 
+@keyframes slideWindow {
+    0% {
+        right: -200px;
+    }
 
-
+    100% {
+        right: 0px;
+    }
+}
 
 
 
